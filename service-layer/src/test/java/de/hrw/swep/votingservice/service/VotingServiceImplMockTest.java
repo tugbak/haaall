@@ -45,6 +45,8 @@ public class VotingServiceImplMockTest {
 
 
 		///5555
+		
+//548425
 		votingService = new VotingServiceImpl(dbReadMock, dbWriteMock);
 	}
 
