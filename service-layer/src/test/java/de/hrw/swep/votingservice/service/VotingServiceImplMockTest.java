@@ -33,6 +33,7 @@ public class VotingServiceImplMockTest {
 		ids.add(2);
 		ids.add(3);
 		when(dbReadMock.getAllQuestions()).thenReturn(ids);
+		
 		when(dbReadMock.getDescriptionOfQuestion(1)).thenReturn(
 				"Mögen Sie Schokoeis?");
 		when(dbReadMock.getVotesForQuestion(1)).thenReturn(votes);
@@ -43,7 +44,13 @@ public class VotingServiceImplMockTest {
 		when(dbReadMock.getVotesForQuestion(2)).thenReturn(votes);
 		when(dbReadMock.getStatusOfQuestion(2)).thenReturn(false);
 
+		when(dbReadMock.getDescriptionOfQuestion(3)).thenReturn(
+				"Wie finden Sie Games of Thrones?");
+		when(dbReadMock.getVotesForQuestion(3)).thenReturn(votes);
+		when(dbReadMock.getStatusOfQuestion(3)).thenReturn(true);
 
+		
+//548425
 		votingService = new VotingServiceImpl(dbReadMock, dbWriteMock);
 	}
 
